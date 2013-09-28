@@ -34,7 +34,8 @@ end
 
 group :development do
 	gem 'rspec-rails'
-	gem 'spinach'
+	gem 'spinach-rails'
+	gem 'database_cleaner'
 end
 
 # Use ActiveModel has_secure_password
