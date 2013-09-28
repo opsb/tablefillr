@@ -1,0 +1,17 @@
+.navbar {
+	@include group;
+	background-color: $red;
+
+	* {
+		line-height: 60px;
+	}
+
+	.brand {
+		color:white;
+		font-weight: bold;
+	}
+
+	.nav {
+		float:right;
+	}
+}

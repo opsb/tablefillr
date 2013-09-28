@@ -1,0 +1,37 @@
+@-webkit-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+.hero-unit {
+	background-color: $red-light;
+	background-image: url('restaurant-texture.png');
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	text-align: center;
+	padding:30px 0;
+	overflow:hidden;
+	-webkit-animation: animatedBackground 60s linear infinite;
+
+	h1 {
+		color:white;
+		font-size:3.5em;
+		font-weight: bold;
+	}
+
+	h3 {
+		color:#2E2E2E;
+		font-size: 2em;
+		margin-bottom:50px;
+	}
+
+	.btn {
+		display: inline-block;
+		margin-bottom:50px;
+	}
+
+	img {
+		display: inline-block;
+		margin-bottom:-107px;
+	}
+}
