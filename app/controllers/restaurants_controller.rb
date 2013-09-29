@@ -1,6 +1,7 @@
 class RestaurantsController < ApplicationController
 	def new
 		@restaurant = Restaurant.new
+		@restaurant.users.build
 	end
 
 	def create
@@ -15,6 +16,6 @@ class RestaurantsController < ApplicationController
 
 	private
 	def restaurant_parameters
-		params.require(:restaurant).permit(:name, :address)
+		params.require(:restaurant).permit(:name, :address, :users_attributes => [:id, :first_name, :last_name, :email, :password])
 	end
 end

@@ -44,6 +44,7 @@ group :development, :test do
 	gem 'spinach-rails'
 	gem 'database_cleaner'
 	gem 'pry'
+	gem 'awesome_print'
 end
 
 # Use ActiveModel has_secure_password
