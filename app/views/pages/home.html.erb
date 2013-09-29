@@ -1,19 +1,16 @@
-<div class="hero-unit">
-	<div class="constrained">
-		<h1>The fastest way to get<br> your restaurant online</h1>
-		<h3>Start taking bookings today</h3>
-		<div>
-			<a href="#" class="btn">Try it now</a>
+<%= content_for :above_nav do %>
+	<div class="hero-unit">
+		<div class="constrained">
+			<h1>The fastest way to get<br> your restaurant online</h1>
+			<h3>Start taking bookings today</h3>
+			<div>
+				<%= link_to 'Try it now', new_restaurant_path, :class => "btn" %>
+			</div>
+			<%= image_tag 'product-shots.png' %>
 		</div>
-		<%= image_tag 'product-shots.png' %>
 	</div>
-</div>
+<% end %>
 
-<div class="navbar">
-	<div class="constrained">
-		<a href="#" class="brand">Tablefillr</a>
-		<div class="nav">
-			<!-- <a href="#" class="btn">Try it now</a> -->
-		</div>
-	</div>
-</div>
+
+
+

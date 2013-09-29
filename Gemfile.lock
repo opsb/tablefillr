@@ -1,4 +1,22 @@
 GIT
+  remote: git://github.com/binarylogic/authlogic.git
+  revision: abc09970ed1fad98c6c12f4ca64d1670d37d11db
+  ref: master
+  specs:
+    authlogic (3.3.0)
+      activerecord (>= 3.2)
+      activesupport (>= 3.2)
+
+GIT
+  remote: git://github.com/ericam/compass-animation.git
+  revision: 6511a1dd131d283d66319f131d1fb6ab91b31ef5
+  ref: master
+  specs:
+    animation (0.1.alpha.3)
+      compass (>= 0.12.0)
+      sass (>= 3.2.0.alpha.95)
+
+GIT
   remote: git://github.com/milgner/compass-rails.git
   revision: c86e7fd9c2605c80816a2f64a3fb8b7c3a09e494
   branch: rails4
@@ -164,6 +182,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  animation!
+  authlogic!
   coffee-rails (~> 4.0.0)
   compass-rails!
   database_cleaner

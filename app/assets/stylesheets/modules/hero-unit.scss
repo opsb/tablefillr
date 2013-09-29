@@ -1,17 +1,14 @@
-@-webkit-keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 100% 0; }
-}
+
 
 .hero-unit {
+	@include animate-background-scroll-right;
 	background-color: $red-light;
 	background-image: url('restaurant-texture.png');
-	background-position: 0px 0px;
-	background-repeat: repeat-x;
+	
 	text-align: center;
 	padding:30px 0;
+	
 	overflow:hidden;
-	-webkit-animation: animatedBackground 60s linear infinite;
 
 	h1 {
 		color:white;

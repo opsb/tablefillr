@@ -29,13 +29,16 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
+gem 'animation', github: 'ericam/compass-animation', ref: 'master'
+
+gem 'authlogic', github: 'binarylogic/authlogic', ref: 'master'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-group :development do
+group :development, :test do
 	gem 'rspec-rails'
 	gem 'spinach-rails'
 	gem 'database_cleaner'

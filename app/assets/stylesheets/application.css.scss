@@ -15,8 +15,11 @@
 
 @import 'colors';
 
+@import "animation";
 @import 'compass/css3';
+
 @import 'mixins/group';
+@import "mixins/animation";
 
 @import 'base';
 @import 'layout';
