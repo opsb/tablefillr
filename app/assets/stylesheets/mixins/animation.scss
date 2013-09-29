@@ -5,6 +5,5 @@
 
 @mixin animate-background-scroll-right {
 	background-position: 0px 0px;
-	background-repeat: repeat-x;
 	@include animation(animatedBackground 60s linear infinite);
 }

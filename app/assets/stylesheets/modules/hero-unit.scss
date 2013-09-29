@@ -1,9 +1,5 @@
-
-
 .hero-unit {
-	@include animate-background-scroll-right;
-	background-color: $red-light;
-	background-image: url('restaurant-texture.png');
+	@include background-feature;
 	
 	text-align: center;
 	padding:30px 0;

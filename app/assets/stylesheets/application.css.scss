@@ -20,6 +20,7 @@
 
 @import 'mixins/group';
 @import "mixins/animation";
+@import "mixins/background";
 
 @import 'base';
 @import 'layout';
@@ -27,3 +28,4 @@
 @import 'modules/btn';
 @import 'modules/hero-unit';
 @import 'modules/navbar';
+@import 'modules/page-background';

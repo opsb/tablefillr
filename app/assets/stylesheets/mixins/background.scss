@@ -1,0 +1,6 @@
+@mixin background-feature {
+	background-position: 0px 0px;
+	background-color: $red-light;
+	background-image: url('restaurant-texture.png');
+	@include animation(animatedBackground 60s linear infinite);	
+}
