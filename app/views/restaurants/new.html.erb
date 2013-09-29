@@ -13,7 +13,7 @@
 		</div>
 
 		<%= f.fields_for :users do |user_f| %>
-			<div class="control-group">
+			<div class="control-group control-group-multi">
 				<%= user_f.label :name %>
 				<%= user_f.text_field :first_name, placeholder: 'First name' %>
 				<%= user_f.text_field :last_name, placeholder: 'Last name' %>

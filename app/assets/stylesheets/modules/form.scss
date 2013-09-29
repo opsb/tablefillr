@@ -12,6 +12,17 @@ form {
 		margin-bottom:20px;
 	}
 
+	.control-group-multi {
+		input {
+			width:49%;
+			display: inline-block;
+		}
+
+		input + input {
+			margin-left:1%;
+		}
+	}
+
 	label {
 		margin-bottom:5px;
 	}
