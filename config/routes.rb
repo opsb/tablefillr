@@ -5,6 +5,8 @@ Tablefillr::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
+  get 'dashboard', :to => "pages#dashboard", :as => :dashboard
+
   resources :restaurants
 
   root :to => 'pages#home'

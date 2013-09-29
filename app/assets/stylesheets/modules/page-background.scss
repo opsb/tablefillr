@@ -1,6 +1,3 @@
 html.page-restaurants-new {
-	@include animate-background-scroll-right;
-	background-color: $red-light;
-	background-repeat: repeat;	
-	background-image: url('restaurant-texture.png');
+	@include background-feature;
 }

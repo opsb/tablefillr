@@ -40,8 +40,10 @@ end
 
 group :development, :test do
 	gem 'rspec-rails'
+	gem 'shoulda-matchers'
 	gem 'spinach-rails'
 	gem 'database_cleaner'
+	gem 'pry'
 end
 
 # Use ActiveModel has_secure_password
