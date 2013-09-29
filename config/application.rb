@@ -19,5 +19,16 @@ module Tablefillr
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| 
+
+        with_error_class = if html_tag.include? (/class.*>/)
+           html_tag.gsub(/class="/, "class=\"error ") 
+        else
+            html_tag.gsub(/(<\w+)/, "\\1 class='error'")
+        end
+
+      "#{with_error_class}".html_safe 
+    }    
   end
 end

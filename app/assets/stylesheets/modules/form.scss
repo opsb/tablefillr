@@ -35,6 +35,15 @@ form {
 		padding:5px 10px;
 	}
 
+	input.error {
+		background-color:rgb(255, 199, 199);
+		color: $red;
+
+		@include input-placeholder {
+			color: lighten($red-light, 30%);
+		}
+	}
+
 	.btn {
 		width:auto;
 		display: inline-block;

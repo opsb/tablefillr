@@ -21,6 +21,7 @@
 @import 'mixins/group';
 @import "mixins/animation";
 @import "mixins/background";
+@import "mixins/placeholder";
 
 @import 'base';
 @import 'layout';
@@ -29,4 +30,4 @@
 @import 'modules/form';
 @import 'modules/hero-unit';
 @import 'modules/navbar';
-@import 'modules/page-background';
+@import 'modules/background';

@@ -46,6 +46,7 @@ group :development, :test do
 	gem 'spinach-rails'
 	gem 'database_cleaner'
 	gem 'pry'
+	gem 'pry-remote'
 	gem 'awesome_print'
 end
 
