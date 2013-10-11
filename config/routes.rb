@@ -8,12 +8,11 @@ Tablefillr::Application.routes.draw do
   # root 'welcome#index'
 
   constraints(Subdomain) do
-    get '/restaurant/:page' => "restaurant/pages#show", :as => :restaurant_pages
+    get '/:page' => "restaurant/pages#show", :as => :restaurant_pages
     root :to => 'restaurant/pages#show', :page => "home", :as => :restaurant_root
   end
 
   get 'dashboard', :to => "pages#dashboard", :as => :dashboard
-
   resources :restaurants
 
   root :to => 'pages#home'
