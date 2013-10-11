@@ -30,7 +30,7 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
+gem "compass-rails", "~> 2.0.alpha.0"
 gem 'animation', github: 'ericam/compass-animation', ref: 'master'
 
 gem 'authlogic', github: 'binarylogic/authlogic', ref: 'master'
