@@ -35,6 +35,8 @@ gem 'animation', github: 'ericam/compass-animation', ref: 'master'
 
 gem 'authlogic', github: 'binarylogic/authlogic', ref: 'master'
 gem 'permalink_fu'
+gem 'liquid'
+gem 'pry-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

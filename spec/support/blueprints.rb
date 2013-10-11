@@ -1,4 +1,5 @@
 require 'machinist/active_record'
+require Rails.root.join("lib", "themes", "theme_loader").to_s
 
 # Add your blueprints here.
 #

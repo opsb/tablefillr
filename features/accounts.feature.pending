@@ -1,0 +1,14 @@
+Feature: Accounts
+	As a restaurant owner
+	I want to login/out
+	So that I can update details on my website
+
+	Scenario: Login
+		Given I have an account
+		And I hit the login link on the home page
+		Then I should be able to sign in using my email and password
+
+	Scenario: Logout
+		Given I am logged in
+		And I hit the logout link
+		Then I should be logged out

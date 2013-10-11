@@ -7,6 +7,7 @@ describe RestaurantsController do
 				:restaurant => {
 					name: "Imperial City",
 					address: "Change Alley, London, Greater London, EC3V 3LL",
+					theme_id: Theme.standard.id,
 					:users_attributes => {
 						"0" => {
 							first_name: "John",

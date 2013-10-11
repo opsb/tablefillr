@@ -8,13 +8,8 @@ class Spinach::Features::RestaurantWebsite < Spinach::FeatureSteps
   end
 
   step 'it should include a home page, menu page and location page' do
-  	visit restaurant_home_url(:subdomain => @restaurant.subdomain)
-  	page.status_code.should == 200
-
-  	visit restaurant_menu_url(:subdomain => @restaurant.subdomain)
-  	page.status_code.should == 200
-
-  	visit restaurant_location_url(:subdomain => @restaurant.subdomain)
-	page.status_code.should == 200
+    %w{home menu location}.each do |page_name|
+      visit restaurant_pages_url(:page => page_name, :subdomain => @restaurant.subdomain)
+    end
   end  
 end
