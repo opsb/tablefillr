@@ -7,10 +7,10 @@ module ThemeLoader
 
 	def self.load(name)
 		Theme.new name: name,
-				  home_page: load_template(name, "pages/home"),
-				  food_page: load_template(name, "pages/food"),
-				  location_page: load_template(name, "pages/location"),
-				  layout: load_template(name, "layout")
+				  home_page: load_template(name, "templates/home"),
+				  food_page: load_template(name, "templates/food"),
+				  location_page: load_template(name, "templates/location"),
+				  layout: load_template(name, "templates/layout")
 	end
 
 	def self.load_template(theme_name, template_name)
