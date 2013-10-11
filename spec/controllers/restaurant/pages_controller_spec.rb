@@ -9,7 +9,7 @@ describe Restaurant::PagesController do
 			get :show, :page => "home"
 		end
 
-		it "should include layout", :focus => true do
+		it "should include layout" do
 			response.body.should include("<head>")
 		end
 	end

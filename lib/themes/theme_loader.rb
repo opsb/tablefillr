@@ -4,12 +4,12 @@ module ThemeLoader
 		theme.save!
 		theme
 	end
-	
+
 	def self.load(name)
 		Theme.new name: name,
-				  home_page: load_template(name, "home"),
-				  food_page: load_template(name, "food"),
-				  location_page: load_template(name, "location"),
+				  home_page: load_template(name, "pages/home"),
+				  food_page: load_template(name, "pages/food"),
+				  location_page: load_template(name, "pages/location"),
 				  layout: load_template(name, "layout")
 	end
 
