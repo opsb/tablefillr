@@ -34,6 +34,7 @@ gem "compass-rails", "~> 2.0.alpha.0"
 gem 'animation', github: 'ericam/compass-animation', ref: 'master'
 
 gem 'authlogic', github: 'binarylogic/authlogic', ref: 'master'
+gem 'permalink_fu'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -48,6 +49,13 @@ group :development, :test do
 	gem 'pry'
 	gem 'pry-remote'
 	gem 'awesome_print'
+	gem 'machinist'
+	gem 'faker'
+	gem 'poltergeist'
+end
+
+group :development do
+	gem 'powify'
 end
 
 group :production do

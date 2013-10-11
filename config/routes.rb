@@ -1,9 +1,17 @@
+require 'subdomain'
+
 Tablefillr::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+
+  constraints(Subdomain) do
+    root :to => 'restaurant/pages#home', :as => :restaurant_home
+    root :to => 'restaurant/pages#menu', :as => :restaurant_menu
+    root :to => 'restaurant/pages#location', :as => :restaurant_location
+  end
 
   get 'dashboard', :to => "pages#dashboard", :as => :dashboard
 
