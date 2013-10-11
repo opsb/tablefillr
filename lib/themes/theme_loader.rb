@@ -2,7 +2,7 @@ module ThemeLoader
 	def self.load(name)
 		Theme.new name: name,
 				  home_page: load_page(name, "home"),
-				  menu_page: load_page(name, "menu"),
+				  food_page: load_page(name, "food"),
 				  location_page: load_page(name, "location")
 	end
 

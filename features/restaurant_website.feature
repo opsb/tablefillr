@@ -6,4 +6,4 @@ Feature: Restaurant website
 	Scenario: Browse all pages
 		Given the restaurant "The Golden Dragon" has created a website
 		Then their website should be available at their subdomain
-		And it should include a home page, menu page and location page
+		And it should include a home page, food page and location page

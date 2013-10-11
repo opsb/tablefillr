@@ -6,7 +6,7 @@ class CreateThemes < ActiveRecord::Migration
       t.integer :restaurant_theme_id
 
       t.text :home_page
-      t.text :menu_page
+      t.text :food_page
       t.text :location_page
 
       t.timestamps
