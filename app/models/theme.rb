@@ -12,4 +12,16 @@ class Theme < ActiveRecord::Base
 	def self.standard
 		Theme.find_by_name("standard") || Theme.create(ThemeLoader.load("standard"))
 	end
+
+	def save_page(name, body)
+		page = pages.find{|p|p.name == name} || pages.build(name: name)
+		page.body = body
+		page.save
+	end
+
+	def save_layout(name, body)
+		layout = layouts.find{|l|l.name == name} || layouts.build(name: name)
+		layout.body = body
+		layout.save		
+	end
 end

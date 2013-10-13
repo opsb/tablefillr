@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131013123006) do
+ActiveRecord::Schema.define(version: 20131013215507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20131013123006) do
     t.integer  "restaurant_id"
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "single_access_token"
   end
 
 end

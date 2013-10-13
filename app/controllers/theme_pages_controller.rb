@@ -1,9 +1,9 @@
 class ThemePagesController < ApplicationController
-	def update
-		theme = Theme.find_by_permalink(params[:theme_id])
-		page = theme.pages.where(name: params[:id]).first || theme.pages.build(name: params[:id])
-		page.body = params[:body].read
+	skip_before_filter :verify_authenticity_token
 
-		render :nothing => true, :status => (theme.save ? 200 : 500)
+	def update
+		theme = Theme.includes(:pages).find_by_permalink(params[:theme_id])
+		success = theme.save_page(params[:id], params[:body].read)
+		render :nothing => true, :status => (success ? 200 : 500)
 	end
 end

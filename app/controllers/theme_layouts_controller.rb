@@ -1,9 +1,9 @@
 class ThemeLayoutsController < ApplicationController
-	def update
-		theme = Theme.find_by_permalink(params[:theme_id])
-		layout = theme.layouts.where(name: params[:id]).first || theme.layouts.build(name: params[:id])
-		layout.body = params[:body].read
+	skip_before_filter :verify_authenticity_token
 
+	def update
+		theme = Theme.includes(:layouts).find_by_permalink(params[:theme_id])
+		success = theme.save_layout(params[:id], params[:body].read)
 		render :nothing => true, :status => (theme.save ? 200 : 500)
 	end
 end
