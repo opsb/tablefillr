@@ -1,5 +1,4 @@
 require 'machinist/active_record'
-require Rails.root.join("lib", "themes", "theme_loader").to_s
 
 # Add your blueprints here.
 #
@@ -15,6 +14,5 @@ Restaurant.blueprint do
 end
 
 Theme.blueprint(:modernizm) do
-	theme = ThemeLoader.load(Rails.root.join("fixtures", "themes", "modernizm").to_s)
-	object.attributes = theme.attributes
+	object.attributes = ThemeLoader.load(Rails.root.join("fixtures", "themes", "modernizm").to_s)
 end

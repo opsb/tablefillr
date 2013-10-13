@@ -17,6 +17,7 @@ Tablefillr::Application.routes.draw do
   resources :restaurants
   resources :themes do
     resources :pages, controller: 'theme_pages'
+    resources :layouts, controller: 'theme_layouts'
   end
 
   root :to => 'pages#home'
