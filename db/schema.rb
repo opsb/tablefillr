@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131011212235) do
+ActiveRecord::Schema.define(version: 20131013111907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pages", force: true do |t|
+    t.integer  "theme_id"
+    t.string   "name"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "restaurant_themes", force: true do |t|
     t.integer  "restaurant_id"
@@ -35,9 +43,6 @@ ActiveRecord::Schema.define(version: 20131011212235) do
     t.string   "name"
     t.string   "permalink"
     t.integer  "restaurant_theme_id"
-    t.text     "home_page"
-    t.text     "food_page"
-    t.text     "location_page"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "layout"

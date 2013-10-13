@@ -53,6 +53,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (0.9.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
     chunky_png (1.2.8)
     cliver (0.2.2)
     coderay (1.0.9)
@@ -211,6 +215,7 @@ DEPENDENCIES
   animation!
   authlogic!
   awesome_print
+  carrierwave
   coffee-rails (~> 4.0.0)
   compass-rails (~> 2.0.alpha.0)
   database_cleaner

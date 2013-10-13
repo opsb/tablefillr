@@ -13,7 +13,11 @@ Tablefillr::Application.routes.draw do
   end
 
   get 'dashboard', :to => "pages#dashboard", :as => :dashboard
+
   resources :restaurants
+  resources :themes do
+    resources :pages, controller: 'theme_pages'
+  end
 
   root :to => 'pages#home'
 

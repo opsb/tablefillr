@@ -13,3 +13,8 @@ Restaurant.blueprint do
 	name { Faker::Company.name }
 	address { Faker::Address.full }
 end
+
+Theme.blueprint(:modernizm) do
+	theme = ThemeLoader.load(Rails.root.join("fixtures", "themes", "modernizm").to_s)
+	object.attributes = theme.attributes
+end

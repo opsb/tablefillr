@@ -2,8 +2,9 @@ class Restaurant::PagesController < ApplicationController
 	def show
 		restaurant = Restaurant.find_by_subdomain!(request.subdomain)
 
-		page_template = Liquid::Template.parse(restaurant.theme["#{params[:page]}_page"])
-		layout_template = Liquid::Template.parse(restaurant.theme["layout"])
+		page = restaurant.theme.pages.find_by_name(params[:page])
+		page_template = Liquid::Template.parse(page.body)
+		layout_template = Liquid::Template.parse(restaurant.theme.layout)
 
 		layout_template.render("content_for_layout" => page_template.render)		
 		content = layout_template.render("content_for_layout" => page_template.render)
