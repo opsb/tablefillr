@@ -1,8 +1,8 @@
 module Liquid
 	module Filters
 		module ThemeAssetFilter
-			def theme_asset_url(name)
-				@context.environments.first['theme'].assets.find_by_name(name).content.url
+			def theme_asset_url(path)
+				@context.environments.first['theme'].assets.find_by_path(path).content.url
 			end
 		end
 	end

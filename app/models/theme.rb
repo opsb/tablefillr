@@ -26,8 +26,8 @@ class Theme < ActiveRecord::Base
 		layout.save		
 	end
 
-	def save_asset(name, content)
-		asset = assets.find{|a|a.name == name} || assets.build(name: name)
+	def save_asset(path, content)
+		asset = assets.find{|a|a.path == path} || assets.build(path: path)
 		asset.content = content
 		asset.save
 	end

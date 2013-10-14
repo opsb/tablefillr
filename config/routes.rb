@@ -18,7 +18,7 @@ Tablefillr::Application.routes.draw do
   resources :themes do
     resources :pages, controller: 'theme_pages'
     resources :layouts, controller: 'theme_layouts'
-    resources :assets, controller: 'theme_assets'
+    resources :assets, controller: 'theme_assets', constraints: { id: /.+/ }
   end
 
   root :to => 'pages#home'

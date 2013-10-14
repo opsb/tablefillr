@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131014211016) do
+ActiveRecord::Schema.define(version: 20131014221156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "assets", force: true do |t|
-    t.string   "name"
+    t.string   "path"
     t.string   "content"
     t.integer  "theme_id"
     t.datetime "created_at"
