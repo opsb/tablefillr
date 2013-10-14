@@ -1,5 +1,5 @@
 class Layout < Template
-	validates_presence_of :name, :body
+	validates_presence_of :name, :content
 	belongs_to :theme, :inverse_of => :pages
 
 	def self.main

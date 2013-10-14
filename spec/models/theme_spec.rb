@@ -5,6 +5,7 @@ describe Theme do
   	it{ should have_many(:restaurant).through(:restaurant_themes) }
   	it{ should have_many(:pages) }
   	it{ should have_many(:layouts) }
+  	it{ should have_many(:assets) }
 
   	it{ should validate_presence_of(:name) }
 

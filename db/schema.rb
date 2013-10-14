@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131013215507) do
+ActiveRecord::Schema.define(version: 20131014211016) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "assets", force: true do |t|
+    t.string   "name"
+    t.string   "content"
+    t.integer  "theme_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "restaurant_themes", force: true do |t|
     t.integer  "restaurant_id"
@@ -34,7 +42,7 @@ ActiveRecord::Schema.define(version: 20131013215507) do
   create_table "templates", force: true do |t|
     t.integer  "theme_id"
     t.string   "name"
-    t.text     "body"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "type"

@@ -3,7 +3,7 @@ class ThemePagesController < ApplicationController
 
 	def update
 		theme = Theme.includes(:pages).find_by_permalink(params[:theme_id])
-		success = theme.save_page(params[:id], params[:body].read)
+		success = theme.save_page(params[:id], params[:content].read)
 		render :nothing => true, :status => (success ? 200 : 500)
 	end
 end

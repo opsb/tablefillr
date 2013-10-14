@@ -17,7 +17,7 @@ module ThemeLoader
 		Dir.glob("#{path}/*").each_with_index.inject({}) do |templates, (path, index)|
 			templates[index.to_s] = {
 				name: File.basename(path).split(".").first,
-				body: File.read(path)
+				content: File.read(path)
 			}
 			templates
 		end

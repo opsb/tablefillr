@@ -3,7 +3,7 @@ class ThemeLayoutsController < ApplicationController
 
 	def update
 		theme = Theme.includes(:layouts).find_by_permalink(params[:theme_id])
-		success = theme.save_layout(params[:id], params[:body].read)
+		success = theme.save_layout(params[:id], params[:content].read)
 		render :nothing => true, :status => (theme.save ? 200 : 500)
 	end
 end
