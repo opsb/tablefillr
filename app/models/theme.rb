@@ -20,15 +20,30 @@ class Theme < ActiveRecord::Base
 		page.save
 	end
 
+	def delete_page(name)
+		page = pages.find_by_name(name)
+		page.destroy if page
+	end
+
 	def save_layout(name, content)
 		layout = layouts.find{|l|l.name == name} || layouts.build(name: name)
 		layout.content = content
 		layout.save		
 	end
 
+	def delete_layout(name)
+		layout = layouts.find_by_name(name)
+		layout.destroy if layout
+	end
+
 	def save_asset(path, content)
 		asset = assets.find{|a|a.path == path} || assets.build(path: path)
 		asset.content = content
 		asset.save
+	end
+
+	def delete_asset(path)
+		asset = assets.find_by_path(path)
+		asset.destroy if asset
 	end
 end
