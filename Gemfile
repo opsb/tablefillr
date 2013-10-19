@@ -55,6 +55,7 @@ group :development, :test do
 	gem 'machinist'
 	gem 'faker'
 	gem 'poltergeist'
+	gem 'dotenv-rails'
 end
 
 group :development do
