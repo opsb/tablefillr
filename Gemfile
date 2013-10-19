@@ -38,6 +38,7 @@ gem 'permalink_fu'
 gem 'liquid'
 gem 'pry-rails'
 gem 'carrierwave'
+gem 'carrierwave-aws'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
