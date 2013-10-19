@@ -11,6 +11,6 @@ class Restaurant::PagesController < ApplicationController
 		content_for_layout = page_template.render(context)
 		layout_with_content = layout_template.render(context.merge('content_for_layout' => content_for_layout))
 
-		render :text => layout_with_content, :content_type => :html
+		render :text => layout_with_content, :content_type => Mime::HTML
 	end
 end
